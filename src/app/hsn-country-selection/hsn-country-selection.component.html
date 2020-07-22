@@ -1,0 +1,33 @@
+<div class="row m-3">
+  <div class="col-sm-3">
+    <select class="form-control" [(ngModel)]="selectedVal">
+      <option value="hsn">HSN</option>
+      <option value="text">Enter Text</option>
+    </select>
+  </div>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" *ngIf="selectedVal === 'hsn'" maxlength="6" [(ngModel)]="hsnCode">
+    <textarea cols="50" class="form-control" *ngIf="selectedVal === 'text'"></textarea>
+  </div>
+  <div class="col-sm-10 pt-2">
+    <ng-select [multiple]="true" [items]="countryList" [closeOnSelect]="false" [(ngModel)]="binding"
+      [(ngModel)]="selectedCountries"></ng-select>
+  </div>
+  <div class="col-sm-5 pt-2">
+    <label for="check-box">
+      <input type="checkbox" id="check-box"> Distinct results only
+    </label>
+  </div>
+  <div class="col-sm-5 pt-2">
+    <button class="btn btn-primary mr-2" (click)="showResults()">Show Results</button>
+  </div>
+
+  <div class="col-sm-8 mt-5 p-5 counry-details-box">
+    <ul *ngFor="let item of showData" class="country-data">
+      <li>chlorine {{item.chlorine}} {{item.country}}</li>
+    </ul>
+  </div>
+  <div class="col-sm-2">
+    <a [href]="fileUrl" download="csvFile.csv">Download CSV</a>
+  </div>
+</div>

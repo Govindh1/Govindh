@@ -1,0 +1,9 @@
+.counry-details-box {
+  height: 70vh;
+  border: 1px solid black;
+  background-color: #c7bfe6;
+}
+
+.country-data {
+  list-style: none;
+}

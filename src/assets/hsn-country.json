@@ -1,0 +1,47 @@
+[
+  {
+    "country": "India",
+    "Hsn": "123456",
+    "chlorine": "1232.12.11"
+  },
+  {
+    "country": "India",
+    "Hsn": "987654",
+    "chlorine": "2182.13.14"
+  },
+  {
+    "country": "India",
+    "Hsn": "654789",
+    "chlorine": "2232.18.13"
+  },
+  {
+    "country": "Srilanka",
+    "Hsn": "123456",
+    "chlorine": "1232.12.12"
+  },
+  {
+    "country": "Srilanka",
+    "Hsn": "987654",
+    "chlorine": "2182.13.13"
+  },
+  {
+    "country": "Srilanka",
+    "Hsn": "654789",
+    "chlorine": "2232.18.14"
+  },
+  {
+    "country": "Nepal",
+    "Hsn": "123456",
+    "chlorine": "1232.12.32"
+  },
+  {
+    "country": "Nepal",
+    "Hsn": "987654",
+    "chlorine": "2182.13.33"
+  },
+  {
+    "country": "Nepal",
+    "Hsn": "654789",
+    "chlorine": "2232.18.34"
+  }
+]

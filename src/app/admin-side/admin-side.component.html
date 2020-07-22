@@ -1,0 +1,34 @@
+<div class="admin-label">Admin Side</div>
+
+<div class="col-sm-auto"><input type="text" placeholder="Enter key" [(ngModel)]="enteredKey"
+    (ngModelChange)="getCurrentValue()"></div>
+<div class="current-val-box">
+  <div class="current-val-list">
+    <label>Current Values::</label>
+    <ng-container *ngIf="currentValue.length">
+      <span class="current-val" (dblclick)="editSelected('name')" *ngIf="!isNameEditable && currentValue[0].name"
+        [ngClass]="{'selected-val': selectedCurrentVal === 'name'}"
+        (click)="selectedValue('name')">{{currentValue[0].name}}</span>
+      <input type="text" [(ngModel)]="currentValue[0].name" *ngIf="isNameEditable">
+      <span class="current-val" (dblclick)="editSelected('age')" *ngIf="!isAgeEditabale && currentValue[0].Age"
+        [ngClass]="{'selected-val': selectedCurrentVal === 'age'}"
+        (click)="selectedValue('age')">{{currentValue[0].Age}}</span>
+      <input type="text" [(ngModel)]="currentValue[0].Age" *ngIf="isAgeEditabale">
+      <span class="current-val" (dblclick)="editSelected('qulaification')"
+        *ngIf="!isQulEditable && currentValue[0].Qulaification"
+        [ngClass]="{'selected-val': selectedCurrentVal === 'qulaification'}"
+        (click)="selectedValue('qulaification')">{{currentValue[0].Qulaification}}</span>
+      <input type="text" [(ngModel)]="currentValue[0].Qulaification" *ngIf="isQulEditable">
+      <span class="current-val" (dblclick)="editSelected('college')" *ngIf="!isColEditabel && currentValue[0].College"
+        [ngClass]="{'selected-val': selectedCurrentVal === 'college'}"
+        (click)="selectedValue('college')">{{currentValue[0].College}}</span>
+      <input type="text" [(ngModel)]="currentValue[0].College" *ngIf="isColEditabel">
+    </ng-container>
+  </div>
+</div>
+
+<div class="col-sm-12">
+  <button class="btn btn-danger mr-2" (click)="deleteSelected()">Delete Selection</button>
+  <button class="btn btn-warning mr-2" (click)="clearAll()">Clear All</button>
+  <button class="btn btn-primary mr-2" (click)="saveAll()">Save</button>
+</div>

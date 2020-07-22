@@ -1,0 +1,26 @@
+.admin-label {
+  text-align: center;
+}
+
+.current-val-box {
+  border: 3px solid black;
+  padding: 5px;
+  margin: 10px;
+  height: 25vh;
+}
+
+.current-val {
+  margin: 5px;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.selected-val {
+  background-color: #377fdf;
+}
+
+.current-val-list {
+  padding: 10px;
+}
